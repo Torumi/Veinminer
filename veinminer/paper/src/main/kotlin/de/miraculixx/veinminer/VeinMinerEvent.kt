@@ -93,6 +93,7 @@ object VeinMinerEvent {
         if (amount <= 1) return@listen
 
         val speed = veinmineInfo.settings.calculateBreakSpeedModifier(amount, multiplicator)
+//        dummy
         val modifier = AttributeModifier(attributeNamespace, speed, AttributeModifier.Operation.MULTIPLY_SCALAR_1)
         val attribute = player.getAttribute(Attribute.BLOCK_BREAK_SPEED) ?: return@listen
         attribute.removeModifier(attributeNamespace)
